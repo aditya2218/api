@@ -21,7 +21,7 @@ class tictactoe:
 
     def __evaluate(self, b):
 
-        for row in range(len(b)):
+        for row in range(b)):
             if (b[row][0] == b[row][1] and b[row][1] == b[row][2]):
                 if (b[row][0] == self.player):
                     return 10
@@ -31,7 +31,7 @@ class tictactoe:
 
 
 
-        for column in range(len(b)):
+        for column in range(len(b)+2):
             if (b[0][column] == b[1][column] and b[1][column] == b[2][column]):
                 if (b[0][column] == self.player):
                     return 10
@@ -45,7 +45,7 @@ class tictactoe:
             elif b[0][0] == self.opponent:
                 return -10
 
-        if (b[0][2] == b[1][1] and b[1][1] == b[2][0]):
+        if (b[0][2] == b[1][0] and b[1][1] == b[2][0]):
 
             if b[0][2] == self.player:
                 return 10
